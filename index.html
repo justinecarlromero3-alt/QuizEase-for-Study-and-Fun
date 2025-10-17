@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QuizEase | Fun Strand Quizzes</title>
+  <link rel="stylesheet" href="style.css">
+   <link rel="icon" href="quizease.svg">
+</head>
+<body>
+  <nav>
+    <a href="index.html"><img src="home.svg" alt="Home"></a>
+    <a href="about.html"><img src="about.svg" alt="About"></a>
+    <a href="contact.html"><img src="contact.svg" alt="Contact"></a>
+    </nav>
+  <main>
+    <section id="gradeSection">
+      <h2>Select Your Grade</h2>
+      <button class="grade-btn" data-grade="11">Grade 11</button>
+      <button class="grade-btn" data-grade="12">Grade 12</button>
+    </section>
+    <section id="strandSection" style="display:none;">
+      <h2>Select Your Strand</h2>
+      <div id="strands"></div>
+    </section>
+    <button id="continueBtn" style="display:none;">Continue to Quiz</button>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>

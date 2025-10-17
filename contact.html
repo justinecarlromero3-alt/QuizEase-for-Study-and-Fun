@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | QuizEase</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="quizease.svg">
+</head>
+<body>
+  <nav>
+    <a href="index.html"><img src="home.svg" alt="Home"></a>
+    <a href="about.html"><img src="about.svg" alt="About"></a>
+    <a href="contact.html"><img src="contact.svg" alt="Contact"></a>
+  </nav>
+  <main>
+    <section class="contact">
+      <h1>Contact Us</h1>
+<h2>Contact / Feedback</h2>
+<p>You can send feedback directly to my email using the form below:</p>
+<form id="contactForm">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your feedback" required></textarea>
+  <button type="submit">Send Feedback</button>
+</form>
+<div id="formResponse"></div>
+<script>
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const name = form.name.value;
+  const email = form.email.value;
+  const message = form.message.value;
+  const responseDiv = document.getElementById('formResponse');
+  responseDiv.textContent = 'Sending...';
+  try {
+    const res = await fetch('http://localhost:3002/api/send-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, message })
+    });
+    const data = await res.json();
+    responseDiv.textContent = data.message;
+    form.reset();
+  } catch (err) {
+    responseDiv.textContent = 'Error sending message.';
+  }
+});
+</script>
+      <div id="contactSuccess" style="display:none;">Thank you! We’ll get back to you soon.</div>
+    </section>
+    <script>
+      document.getElementById('contactForm').onsubmit = function(e) {
+        e.preventDefault();
+        document.getElementById('contactForm').style.display = 'none';
+        document.getElementById('contactSuccess').style.display = 'block';
+      }
+    </script>
+  </main>
+</body>
+</html>

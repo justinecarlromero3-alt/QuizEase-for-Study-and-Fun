@@ -1,0 +1,224 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #4F8EF7, #A7FFEB);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+nav {
+  display: flex;
+  gap: 2em;
+ justify-content: center;
+ align-items: center;
+  background: #fff;
+  border-bottom: 2px solid #4F8EF7;
+  padding: 1em 0;
+}
+nav a img {
+  width: 32px;
+  height: 32px;
+  filter: drop-shadow(1px 2px 1px #b1b1b1);
+}
+.hero {
+  text-align: center;
+  margin-top: 3em;
+}
+.logo {
+  width: 100px;
+  margin-bottom: 1em;
+}
+.strand-selection {
+  text-align: center;
+  margin-top: 2em;
+}
+.strands {
+  display: flex;
+  gap: 1.5em;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.2em;
+}
+.strand-btn {
+  background: #fff;
+  border: 2px solid #4F8EF7;
+  border-radius: 16px;
+  padding: 1em 2em;
+  cursor: pointer;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 6px #b9eaff60;
+  transition: transform 0.2s, background 0.2s;
+}
+.strand-btn:hover {
+  background: #A7FFEB;
+  transform: scale(1.08);
+  border-color: #4F8EF7;
+}
+.strand-btn img {
+  width: 37px;
+  margin-right: 0.7em;
+}
+.about-us, .contact {
+  max-width: 500px;
+  margin: 2em auto;
+  background: #fff;
+  border-radius: 15px;
+  padding: 2em;
+  box-shadow: 0 2px 12px #7fd7ff50;
+}
+.about-us h1, .contact h1 {
+  color: #4F8EF7;
+}
+.researchers {
+  list-style: none;
+  padding: 0;
+}
+.researchers li {
+  display: flex;
+  align-items: center;
+  margin: 0.7em 0;
+}
+.researchers img {
+  width: 32px;
+  margin-right: 1em;
+  border-radius: 50%;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.contact label {
+  font-weight: bold;
+}
+.contact input, .contact textarea {
+  padding: 0.7em;
+  border: 1.5px solid #4F8EF7;
+  border-radius: 8px;
+}
+.contact button {
+  background: #4F8EF7;
+  color: white;
+  padding: 0.8em;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.2s;
+}
+.contact button:hover {
+  background: #0073e6;
+}
+.file-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+.file-list li {
+  background: #fff;
+  border: 2px solid #4F8EF7;
+  border-radius: 10px;
+  padding: 1em 2em;
+  cursor: pointer;
+  font-size: 1.1em;
+  width: 60%;
+  text-align: center;
+  transition: background 0.2s, transform 0.2s;
+}
+.file-list li:hover {
+  background: #A7FFEB;
+  transform: scale(1.05);
+}
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e3f2fd;
+  padding: 1em;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+#timer {
+  font-size: 1.2em;
+  color: #ff1744;
+  font-weight: bold;
+}
+#quizQuestion {
+  font-size: 1.25em;
+  margin-bottom: 1em;
+}
+#quizForm label {
+  display: block;
+  margin: 0.7em 0;
+}
+#quizForm input[type="radio"] {
+  margin-right: 0.6em;
+}
+#quizForm input[type="text"] {
+  padding: 0.5em;
+  border-radius: 5px;
+  border: 1.5px solid #4F8EF7;
+  font-size: 1em;
+}
+#nextBtn {
+  margin-top: 1em;
+  background: #4F8EF7;
+  color: white;
+  padding: 0.7em 2em;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#nextBtn:hover {
+  background: #0073e6;
+}
+#quizResult, #progressSection {
+  margin: 2em auto;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 2em;
+  box-shadow: 0 2px 12px #7fd7ff50;
+  text-align: center;
+}
+#scoreBox {
+  font-size: 1.5em;
+  color: #388e3c;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+#answerReveal {
+  margin-top: 1em;
+  text-align: left;
+  font-size: 1em;
+}
+#answerReveal ul {
+  padding-left: 1em;
+}
+#progressTable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+#progressTable th, #progressTable td {
+  padding: 0.6em 0.3em;
+  border-bottom: 1px solid #e0e0e0;
+}
+#progressTable th {
+  background: #A7FFEB;
+}
+@media (max-width: 600px) {
+  .file-list li, .about-us, .contact, #quizResult, #progressSection {
+    width: 95%;
+    padding: 1em;
+  }
+  .strands {
+    flex-direction: column;
+    align-items: center;
+  }
+}

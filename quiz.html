@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz | QuizEase</title>
+  <link rel="stylesheet" href="style.css">
+   <link rel="icon" href="quizease.svg">
+</head>
+<body>
+  <nav>
+    <a href="index.html"><img src="home.svg" alt="Home"></a>
+    <a href="about.html"><img src="about.svg" alt="About"></a>
+    <a href="contact.html"><img src="contact.svg" alt="Contact"></a>
+  </nav>
+  <main>
+    <section id="fileSelection" style="display:none;">
+      <h2 id="strandTitle"></h2>
+      <h3>Select a lesson file/module</h3>
+      <ul class="file-list"></ul>
+    </section>
+    <section id="quizSection" style="display:none;">
+      <div class="quiz-header">
+        <h2 id="quizRound"></h2>
+        <div id="timer"></div>
+      </div>
+      <div id="quizQuestion"></div>
+      <form id="quizForm"></form>
+      <button id="nextBtn" style="display:none;">Next</button>
+    </section>
+    <section id="quizResult" style="display:none;">
+      <h2>Your Score</h2>
+      <div id="scoreBox"></div>
+      <div id="answerReveal"></div>
+      <button onclick="window.location='index.html'">Back to Home</button>
+    </section>
+    <section id="progressSection">
+      <h2>My Progress</h2>
+      <div id="progressTable"></div>
+    </section>
+  </main>
+  <script src="quiz.js"></script>
+  <script src="data.js"></script>
+</body>
+</html>
